@@ -5,6 +5,11 @@ import addIcon from '../SVG/add.svg';
 import noPriorityIcon from '../SVG/No-priority.svg';
 import './TaskPriority.css';
 import sortTasks from '../Ordering/TaskSorting';
+import todoSmallIcon from '../SVG/todo.svg';
+import inProgressIcon from '../SVG/in-progress.svg';
+import doneIcon from '../SVG/Done.svg';
+import canceledIcon from '../SVG/Cancelled.svg';
+import backlogIcon from '../SVG/Backlog.svg';
 
 function TaskPriority({ taskList, sortBy }) {
   // Group tasks by priority level
@@ -57,21 +62,47 @@ function TaskPriority({ taskList, sortBy }) {
                   <img src={noPriorityIcon} alt="No Priority" className="action-icon" />
                 </div>
               </div>
-              {sortTasks(tasksByPriority[priority], sortBy).map((task) => (
+              {sortTasks(tasksByPriority[priority], sortBy).map((task) => {
+                let statusIcon;
+                switch (task.status) {
+                  case "Todo":
+                    statusIcon = <img src={todoSmallIcon} alt="Todo" className="status-icon" />;
+                    break;
+                  case "In progress":
+                    statusIcon = <img src={inProgressIcon} alt="In Progress" className="status-icon" />;
+                    break;
+                  case "Canceled":
+                    statusIcon = <img src={canceledIcon} alt="Canceled" className="status-icon" />;
+                    break;
+                  case "Done":
+                    statusIcon = <img src={doneIcon} alt="Done" className="status-icon" />;
+                    break;
+                  case "Backlog":
+                    statusIcon = <img src={backlogIcon} alt="Backlog" className="status-icon" />;
+                    break;
+                  default:
+                    statusIcon = null;
+                }
+
+                return (
+                
                 <div key={task.id} className="task-card">
-                  <div className="task-id">{task.id}</div>
+                <div className="task-id">{task.id}</div>
+                <div className="task-content">
+                  <div className="task-icon">{statusIcon}</div>
                   <div className="task-title">{task.title}</div>
-                  <div className="task-info">
-                    <div className="tag-container">
-                      <PriorityIcon priority={task.priority} />
-                    </div>
-                    <div className="label-container">
-                      <img src={todoIcon} alt="To-Do" className="icon-small" />
-                      <div className="label-text">{task.tag[0]}</div>
-                    </div>
+                </div>
+                <div className="task-details">
+                  <div className="priority-tag">
+                    <PriorityIcon priority={task.priority} />
+                  </div>
+                  <div className="task-label">
+                    <img src={todoIcon} alt="To-Do" className="small-icon" />
+                    <div className="label-text">{task.tag[0]}</div>
                   </div>
                 </div>
-              ))}
+              </div>
+              )})}
             </div>
           );
         })}
