@@ -1,0 +1,19 @@
+/* MainApp.css */
+
+body, .main-app {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+.main-app {
+  width: 100%; /* Make the MainApp component take full width */
+  height: 100%; /* Make the MainApp component take full height */
+  box-sizing: border-box; /* Include padding and border in the width and height */
+}

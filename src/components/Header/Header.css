@@ -1,0 +1,73 @@
+/* General Styles for NavigationBar */
+.navigation-bar {
+  position: relative;
+  padding: 20px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for Toggle Button */
+.toggle-button {
+  cursor: pointer;
+  display: flex;
+  padding: 4px 8px;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  border: 1px solid #d3d3d3;
+  border-radius: 0.25rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon Styles */
+.icon-small {
+  width: 16px;
+  height: 16px;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+  position: absolute;
+  top: 56px;
+  padding: 16px 24px;
+  border: 1px solid #d3d3d3;
+  border-radius: 0.25rem;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+}
+
+/* Label Styles */
+.dropdown-label {
+  color: #4b5563;
+  font-size: 14px;
+}
+
+/* Select Styles */
+.dropdown-select {
+  border: 1px solid #d3d3d3;
+  border-radius: 0.25rem;
+  padding: 4px 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation Bar Wrapper Styles */
+.navigation-bar-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* Dropdown Section Styles */
+.dropdown-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 4rem;
+}

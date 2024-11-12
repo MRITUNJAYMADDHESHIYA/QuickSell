@@ -1,0 +1,118 @@
+.user-tasks-container {
+  padding: 1rem;
+}
+
+.user-tasks-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.user-section {
+  padding: 1rem;
+}
+
+.user-header {
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.user-name {
+  font-weight: 600;
+}
+
+.task-count {
+  color: rgb(107, 114, 128);
+}
+
+.user-actions {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.action-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.task-card {
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.task-id {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: rgb(107, 114, 128);
+}
+
+.task-content {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.task-icon {
+  flex-shrink: 0;
+}
+
+.task-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.task-details {
+  display: flex;
+  gap: 0.5rem;
+  align-items: stretch;
+}
+
+.priority-tag {
+  border: 1px solid #c2baba;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+}
+
+.task-label {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #c2baba;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+}
+
+.small-icon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.label-text {
+  color: rgb(107, 114, 128);
+}

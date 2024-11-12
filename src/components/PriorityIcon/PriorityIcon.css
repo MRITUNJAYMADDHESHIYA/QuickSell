@@ -1,0 +1,6 @@
+/* Tag.css */
+.icon {
+    width: 12px; /* Equivalent to "w-3" in Tailwind */
+    height: 12px; /* Equivalent to "h-3" in Tailwind */
+  }
+  
